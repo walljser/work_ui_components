@@ -1,0 +1,93 @@
+$header-logo-bg-color             : linear-gradient(#1cc6fd, #16a4fa);
+$header-navbar-logo-width         : 265px;
+$header-navbar-logo-font-size     : $font-lg;
+
+$header-navbar-brand-color        : #a0a0a0;
+
+.header-navbar {
+  // display: flex;
+  width: 100%;
+  height: $header-height;
+  position: relative;
+
+  &-logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: $header-navbar-logo-width;
+    font-size: $header-navbar-logo-font-size;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $header-logo-bg-color;
+
+    svg {
+      width: 36px;
+      height: 24px;
+      margin-right: 8px;
+    }
+
+    &-content {
+      display: inline-block;
+      color: #fff;
+    }
+  }
+
+  &-brand {
+    margin-left: $header-navbar-logo-width;
+    width: calc(100% - $header-navbar-logo-width);
+    height: 100%;
+    // flex: 1;
+    border-bottom: 1px solid $border-color;
+    color: $header-navbar-brand-color;
+  }
+
+  &-group {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &-item {
+    display: inline-block;
+    padding: 0 16px;
+
+    .user {
+      svg {
+        width: 22px;
+        height: 16px;
+        // margin-right: 4px;
+      }
+    }
+
+    .identity {
+      svg {
+        width: 22px;
+        height: 16px;
+        margin-right: 4px;
+      }
+    }
+
+    &-divider {
+      display: inline-block;
+      width: 1px;
+      height: 0;
+      padding-top: 30px;
+      background: $border-color;
+    }
+
+    &-right {
+      width: 102px;
+      padding-left: 14px;
+
+      svg {
+        width: 16px;
+        height: 10px;
+        margin-left: 6px;
+      }
+    }
+  }
+}

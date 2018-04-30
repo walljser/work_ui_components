@@ -1,0 +1,56 @@
+$pagination-btn-padding                 : 12px 15px;
+$pagination-btn-margin                  : 0 7px;
+$pagination-btn-border-radius           : 3px;
+
+$pagination-btn-bg-color                : #e7e7e7;
+$pagination-btn-color                   : #4d5b67;
+
+$pagination-btn-bg-color-hover          : #30b8ff;
+$pagination-btn-color-hover             : #fff;
+
+$pagination-btn-bg-color-active         : #16a4fa;
+$pagination-btn-color-active            : #fff;
+
+.pagination {
+  display: flex;
+  text-align: center;
+  
+  li {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+  }
+
+  &-number {
+    // padding: $pagination-btn-padding;
+    color: $pagination-btn-color;
+    background-color: $pagination-btn-bg-color;
+    border-radius: $pagination-btn-border-radius;
+    margin: $pagination-btn-margin;
+    cursor: pointer;
+
+    &:hover {
+      color: $pagination-btn-color-hover;
+      background-color: $pagination-btn-bg-color-hover;
+      transition: 300ms ease-out;
+    }
+
+    &.active {
+      color: $pagination-btn-color-active;
+      background-color: $pagination-btn-bg-color-active;
+    }
+  }
+
+  button {
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+
+    path {
+      fill: #4d5b67;
+    }
+  }
+}

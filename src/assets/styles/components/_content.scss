@@ -1,0 +1,194 @@
+$content-header-tab-color-active        : #3a98d8;
+$content-header-tab-border-color-active : $primary-color;
+
+$content-body-background-color          : #edf2f6;
+
+.content {
+  width: calc(100% - 265px); // 减去sidebar的宽度
+  margin-left: 265px;
+  height: calc(100% - 64px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  min-width: 800px;
+  // -ms-overflow-style: none;
+  // overflow: -moz-scrollbars-none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &-header {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    border-bottom: 1px solid $border-color;
+
+    &-tab {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+
+      &-divider {
+        display: inline-block;
+        width: 1px;
+        height: 0;
+        padding-top: 30px;
+        background: $border-color;
+        margin: 0 40.06px;
+      }
+    }
+
+    &-tab-item {
+      display: inline-block;
+      width: 108px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      cursor: pointer;
+      text-decoration: none;
+
+      &:hover {
+        color: $content-header-tab-color-active;
+        transition: 300ms ease-in-out;
+      }
+
+      &.active {
+        box-sizing: border-box;
+        color: $content-header-tab-color-active;
+        border-bottom: 1px solid $content-header-tab-border-color-active;
+      }
+    }
+
+    &-btn {
+      margin-left: auto;
+
+      button {
+        width: 120px;
+        position: relative;
+        padding-left: 20px;
+      }
+
+      button + button {
+        margin-left: 20px;
+      }
+    }
+
+    &-btn-icon {
+      position: absolute;
+      top: 6px;
+      left: 10px;
+    }
+  }
+
+  &-body {
+    background-color: $content-body-background-color;
+    min-height: calc(100% - 50px);
+    position: relative;
+    overflow-x: hidden;
+
+    &::webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &-searchbar {
+    width: 100%;
+    overflow: hidden;
+
+    &-group {
+      padding: 23px 0 25px 0;
+      float: right;
+    }
+
+    &-input {
+      display: inline-block;
+      margin-right: 10px;
+      position: relative;
+
+      input {
+        display: inline-block;
+        height: 34px;
+        line-height: 34px;
+        width: 309px;
+        border: 1px solid #e2e2e2;
+        border-radius: 2px;
+        padding-left: 10px;
+        padding-right: 30px;
+
+        &::placeholder {
+          color: #dadada;
+        }
+      }
+    }
+
+    &-input-icon {
+      position: absolute;
+      right: 8px;
+      top: 10px;
+
+      svg {
+        width: 17px;
+        height: 17px;
+      }
+    }
+
+    .btn {
+      width: 76px;
+      margin-right: 70px;
+    }
+  }
+
+  &-main {
+    min-height: 400px;
+    padding-bottom: 183px;
+  }
+
+  &-footer {
+    padding-top: 43px;
+    padding-bottom: 100px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+
+    &-pagination {
+      display: inline-block;
+    }
+
+    button {
+      &:first-child {
+        margin-left: auto;
+        margin-right: 16px;
+      }
+
+      &:last-child {
+        margin-right: auto;
+        margin-left: 16px;
+      }
+    }
+  }
+
+  &-empty {
+    position: relative;
+    box-sizing: border-box;
+    text-align: center;
+
+    &-message {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    &-logo {
+      background-image: url("../img/vr.png");
+      background-size: cover;
+      height: 120px;      
+      width: 120px;
+      margin-bottom: 25px;
+      opacity: 0.6;
+    }
+  }
+}

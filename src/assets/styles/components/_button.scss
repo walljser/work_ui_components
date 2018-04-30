@@ -1,0 +1,65 @@
+$btn-pagination-bg-color                : #e7e7e7;
+$btn-pagination-color                   : #4d5b67;
+
+$btn-pagination-bg-color-hover          : #30b8ff;
+$btn-pagination-color-hover             : #fff;
+
+$btn-hover-bg-color                     : linear-gradient(#1ec5fc, #149efa);
+
+.btn {
+  cursor: pointer;
+  height: 34px;
+  line-height: 34px;
+  margin-left: auto;
+  box-sizing: border-box;
+  border-radius: 1px;
+
+  &-primary {
+    background: $primary-bg-color;
+    border: 1px solid $primary-border;
+    color: #fff;
+  }
+
+  &-gray {
+    // background: linear-gradient(#b9c1d1, #919eb6);
+    border: 1px solid #aab5c7;
+    color: #fff;
+    background-color: #b9c1d1;
+  }
+
+  &-outline {
+    background-color: #fff;
+    border: 1px solid $border-color;
+
+    &.btn-primary {
+      border-color: $primary-border;
+      color: $primary-color;
+    }
+  }
+
+  &-pre,
+  &-next {
+    padding: 12px 12px;
+    border: none;
+    background-color: $btn-pagination-bg-color;
+    cursor: pointer;
+    border-radius: 3px;
+
+    &:hover {
+      path {
+        transition: 300ms ease-out;
+        fill: $btn-pagination-color-hover;
+      }
+      background: $btn-hover-bg-color;
+      transition: 300ms ease-out;
+    }
+
+    svg {
+      font-size: 12px;
+    }
+
+    path {
+      fill: #4d5b67;
+    }
+  }
+}
